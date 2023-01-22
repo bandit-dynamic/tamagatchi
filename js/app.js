@@ -116,22 +116,22 @@ function Tamagotchi() {
   function startGame() {
       document.querySelector(".game-screen").classList.toggle("hide");
       document.querySelector(".main-menu-screen").classList.toggle("hide");
-  
-      //Tamagotchi's name
-      var tamagotchiName = prompt("Please, enter a name of your tamagotchi:", "");
-      document.querySelector("#name").innerHTML = tamagotchiName;
-      if (tamagotchiName == null || tamagotchiName.replace(/\s/g, '') == "") {
-          tamagotchiName = "Tamagotchi";
-          document.querySelector("#name").innerHTML = tamagotchiName;
+
+      //Tamagatchi's name
+      const tamagatchiName = prompt("Please, enter a name of your tamagatchi:", "");
+    //   document.querySelector("#name").innerHTML = tamagatchiName;
+      if (tamagatchiName == null || tamagatchiName.replace(/\s/g, '') == "") {
+          tamagatchiName = "Tamagatchi";
+          document.querySelector("#name").innerHTML = tamagatchiName;
       }
-  
+      alert(`Your tamagatchi alien's name is ${tamagatchiName}`);
+    }
       //Start game
       core();
       let coreUpdate = setInterval(core, 100 * day);
   
       //Main function of tamagotchi
       function core() {
-          //console.log(tmgch);
           sleepHpCount = (tmgch.sleep / maxSleep * 100).toFixed(2);
           hungerHpCount = (tmgch.hunger / maxHunger * 100).toFixed(2);
           playHpCount = (tmgch.play / maxPlay * 100).toFixed(2);
@@ -146,7 +146,7 @@ function Tamagotchi() {
               sleepHpCount = 0;
               hungerHpCount = 0;
               clearInterval(coreUpdate);
-              alert('Your score: ' + score + '\n ╭(×_×)╮');
+              alert(`Your score is ${score}, your tamagatchi alien is dead, and you failed to conquer the galaxy`);
           }
   
           //Max health percentage (real)
@@ -181,77 +181,4 @@ function Tamagotchi() {
   
           //Remove HP every tick
           tmgch.tick();
-  
-          //Animations
-  
-          //Hunger bar
-          if (hungerHpCount <= 0) {
-              mouth.innerHTML = "_";
-          } else if (hungerHpCount < 20) {
-              mouth.innerHTML = "0";
-          } else if (hungerHpCount < 40) {
-              mouth.innerHTML = "O";
-          } else if (hungerHpCount < 60) {
-              mouth.innerHTML = "o";
-          } else if (hungerHpCount < 80) {
-              mouth.innerHTML = "-";
-          } else if (hungerHpCount > 80) {
-              mouth.innerHTML = "▿";
-          }
-  
-          //Sleep bar
-          if (sleepHpCount <= 0) {
-              eyeLeft.innerHTML = "×";
-              eyeRight.innerHTML = "×";
-          } else if (sleepHpCount < 20) {
-              eyeLeft.innerHTML = "◡";
-              eyeRight.innerHTML = "◡";
-              mouth.innerHTML = ".";
-          } else if (sleepHpCount < 40) {
-              eyeLeft.innerHTML = " ´ ";
-              eyeRight.innerHTML = " ` ";
-          } else if (sleepHpCount < 60) {
-              eyeLeft.innerHTML = "●";
-              eyeRight.innerHTML = "●";
-          } else if (sleepHpCount < 80) {
-              eyeLeft.innerHTML = "・";
-              eyeRight.innerHTML = "・";
-          } else if (sleepHpCount > 80) {
-              eyeLeft.innerHTML = "＾";
-              eyeRight.innerHTML = "＾";
-          }
-  
-          //Play bar
-          if (playHpCount <= 0) {
-              effectRight.innerHTML = "   ";
-              effectLeft.innerHTML = "   ";
-              handRight.innerHTML = "╮";
-              handLeft.innerHTML = "╭";
-          } else if (playHpCount < 40) {
-              effectRight.innerHTML = "*  ";
-              effectLeft.innerHTML = "   ";
-              handRight.innerHTML = " ";
-              handLeft.innerHTML = " ";
-          } else if (playHpCount < 60) {
-              effectLeft.innerHTML = "   ";
-              effectRight.innerHTML = "   ";
-              handRight.innerHTML = "╮";
-              handLeft.innerHTML = "╭";
-          } else if (playHpCount < 80) {
-              effectLeft.innerHTML = "  ✧";
-              effectRight.innerHTML = "✧  ";
-              handRight.innerHTML = "╭";
-              handLeft.innerHTML = "╮";
-          } else if (playHpCount < 90) {
-              effectLeft.innerHTML = " ˖✧";
-              effectRight.innerHTML = "✧˖ ";
-              handRight.innerHTML = "/";
-              handLeft.innerHTML = "\\";
-          } else if (playHpCount > 90) {
-              effectLeft.innerHTML = "°˖✧";
-              effectRight.innerHTML = "✧˖°";
-              handRight.innerHTML = "◜";
-              handLeft.innerHTML = "◝";
-          }
-      }
-  }
+        }
