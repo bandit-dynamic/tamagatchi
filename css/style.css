@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.hide {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+/*Settings Screen*/
+.settings{
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
