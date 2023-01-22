@@ -15,9 +15,9 @@ h3 {
     font-weight: 300;
 }
 
-.hide {
+/*.hide {
     display: none;
-}
+} */
 
 .menu {
     position: absolute;
@@ -32,6 +32,29 @@ h3 {
     position: absolute;
     top: 50vh;
     transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.settings-buttons a {
+display: inline-block;
+font-size: 30px;
+background-color: transparent;
+border: 2px solid #131212;
+padding: 5px 10px;
+margin: 20px 20px 0px 20px;
+transition: background-color .1s, color .1s;
+text-decoration:underline;
+font-weight: 500;
+font-family: 'Roboto', sans-serif;
+}
+
+.settings-buttons a:hover {
+background-color: #131212;
+color: #fafafa;
+}
+
+.settings-buttons {
     width: 100%;
     text-align: center;
 }
