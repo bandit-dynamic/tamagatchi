@@ -146,11 +146,26 @@ function Tamagotchi() {
               sleepHpCount = 0;
               hungerHpCount = 0;
               clearInterval(coreUpdate);
-              alert(`Your score is ${score}, your tamagatchi alien is dead, and you failed to conquer the galaxy`);
+              alert(`Your score is ${score}, your tamagatchi alien is dead, and you failed to spread throughout the galaxy`);
           }
   
-          //Max health percentage (real)
-          //Little help for player
+          //transformation gifs
+        //   function evolve () {
+            if (score < 25) {
+            document.querySelector(".alien-egg-img").src = "https://media2.giphy.com/media/g3NVdvODbNvlC/100.webp?cid=ecf05e47pydbiggniuc5joh9er20vrheqvmywn2c3w6x8n4b&rid=100.webp&ct=g";
+            // alert("Your alien is a face hugger!")
+            } else if (score > 25 && score < 50) {
+                document.querySelector(".alien-burster-img").src = "https://media.tenor.com/TxZdT5_swY0AAAAM/chestbuster-aliens.gif";
+                // alert("Your face hugger impregnated an unsuspected human and has evolved into a chest burster!")
+            } else if (score > 50 && score < 75) {
+                document.querySelector(".alien-queen-img").src = "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif" 
+                // alert ("Your chest burster has evolved into the Queen alien!")
+
+            }
+          
+
+
+          //Max health percentage
           if (tmgch.sleep >= (maxSleep + (maxSleep / 100 * 20))) {
               tmgch.sleep = maxSleep + (maxSleep / 100 * 20);
           }
