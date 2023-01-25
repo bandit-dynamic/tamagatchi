@@ -144,19 +144,23 @@ document.addEventListener("DOMContentLoaded", function() {
             scoreBar.innerHTML = score;
     
             //Death ability
+            
             let death= document.querySelector("#ellen-ham")
             if ((playHpCount <= 0) || (sleepHpCount <= 0) || (hungerHpCount <= 0)) {
                 playHpCount = 0;
                 sleepHpCount = 0;
                 hungerHpCount = 0;
                 clearInterval(coreUpdate);
-                death.src= "https://64.media.tumblr.com/d87139bc126ba73e715d215914ddbbd1/tumblr_odo8oo2b3H1qdhps7o4_r1_250.gif"
+                document.querySelector("#ellen-ham").src="https://64.media.tumblr.com/d87139bc126ba73e715d215914ddbbd1/tumblr_odo8oo2b3H1qdhps7o4_r1_250.gif" 
                 alert(`Your score is ${score}, your tamagatchi alien is dead, and you failed to spread throughout the galaxy`);
             }
     
             //transformation gifs
  
             let born= document.querySelector("#alien-egg")
+            let alienEgg = document.querySelector("#alien-egg")
+            let alienBurster = "#alien-burster"
+            let alienQueen = "#alien-queen"
 
             setTimeout (() => {
             // alert("Your alien tamagatchi pet is a face hugger!")
@@ -172,6 +176,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 born.src= "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif"
                 born.visibility = 'visible'
             }, 40000)
+
+            setInterval(() => {
+                const x = Math.floor(Math.random() *10)
+                const y = Math.floor(Math.random() * -4)
+                alienEgg.style.transform = `translate(${x}px,${y}px)`;
+            },1000)
 
 
             
