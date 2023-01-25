@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const sleepBtn = document.querySelector("#action-sleep");
     const feedBtn = document.querySelector("#action-feed");
     const playBtn = document.querySelector("#action-play");
+    const nightModeOffBtn = document.querySelector("#nightmode-off")
+    const nightModeOnBtn = document.querySelector("#nightmode-on");
     const startBtn = document.querySelector("#action-menu-start-game");
     const settingsBtn = document.querySelector("#action-menu-settings");
     const settingsBackBtn = document.querySelector("#action-settings-back");
@@ -101,7 +103,26 @@ document.addEventListener("DOMContentLoaded", function() {
         MainMenu();
     });
     
+    nightModeOffBtn.addEventListener("click", function() {
+        nightModeOff();
+    })
     
+    nightModeOnBtn.addEventListener("click", function() {
+        nightModeOnBtn();
+    })
+
+    // NightMode toggle
+    function nightModeOn() {
+        document.querySelector('body').classList.add("nightmode-on");
+        document.querySelector('#nightmode').innerHTML = "on";
+    }
+
+    function nightModeOff() {
+        document.querySelector('body').classList.remove("nightmode-on");
+        document.querySelector('#nightmode').innerHTML = "off";
+    }
+
+
     //Togglers for buttons
     document.querySelector(".game-screen").classList.toggle("hide");
     document.querySelector(".menu-screen-settings").classList.toggle("hide");
@@ -153,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 clearInterval(coreUpdate);
                 document.querySelector("#ellen-ham").src="https://64.media.tumblr.com/d87139bc126ba73e715d215914ddbbd1/tumblr_odo8oo2b3H1qdhps7o4_r1_250.gif" 
                 alert(`Your score is ${score}, your tamagatchi alien is dead, and you failed to spread throughout the galaxy`);
-            }
+            } 
     
             //transformation gifs
  
@@ -165,17 +186,17 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout (() => {
             // alert("Your alien tamagatchi pet is a face hugger!")
                 born.visibility = 'visible'
-            }, 20000)
+            }, 30000)
 
             setTimeout (()=> {
                 born.src="https://media.tenor.com/TxZdT5_swY0AAAAM/chestbuster-aliens.gif"
                 born.visibility = 'visible'
-            }, 30000)
+            }, 60000)
 
             setTimeout (()=> {
                 born.src= "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif"
                 born.visibility = 'visible'
-            }, 40000)
+            }, 90000)
 
             setInterval(() => {
                 const x = Math.floor(Math.random() *10)

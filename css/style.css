@@ -194,56 +194,33 @@ color: #fafafa;
     display: inline;
 }
 
-/* @media (max-width: 860px) {
-    .hp {
-        font-size: 20px;
-    }
-    .buttons a, .menu-buttons a, .settings-buttons a {
-        font-size: 30px;
-    }
-    #name {
-        font-size: 20px;
-    }
-    #t-body {
-        font-size: 50px;
-    }
-} */
 
-/* @media (max-width: 540px) {
-    .hp p {
-        font-size: 20px;
-        display: block;
-    }
-    .buttons a, .menu-buttons a, .settings-buttons a {
-        font-size: 20px;
-        margin: 20px 5px 0px 5px;
-    }
-    #name {
-        font-size: 20px;
-    }
-    #t-body {
-        font-size: 40px;
-    }
-} */
-/* 
-@media (max-width: 540px) {
-    .hp p {
-        font-size: 20px;
-        display: block;
-    }
-    .buttons a, .menu-buttons a, .settings-buttons a {
-        font-size: 20px;
-        margin: 20px 2px 0px 2px;
-    }
-    #name {
-        font-size: 20px;
-    }
-    #t-body {
-        font-size: 30px;
-    }
-    .tamagatchi {
-        top: 120px;
-        transform: translateY(0);
-    }
-} */
+/* Day & Night (yup yup) */
+body.nightmode-on {
+    background-color: rgb(32, 30, 30);
+    color: whitesmoke;
+}
 
+body.nightmode-on .settings-buttons a {
+    color: whitesmoke;
+    border : 2px solid whitesmoke
+}
+
+body.nightmode-on .settings-buttons a:hover {
+    background-color: whitesmoke;
+    color:rgb(37, 36, 36)
+}
+
+body.nightmode-on#name {
+    color: whitesmoke;
+    background-color:rgb(37, 36, 36)
+}
+
+body.nightmode-on .buttons a, body.nightmode-on .menu-buttons a {
+    background-color:rgb(37, 36, 36);
+    color: whitesmoke;
+}
+
+body.nightmode-on .buttons a:hover, body.nightmode-on .menu-buttons a:hover {
+    background-color: whitesmoke;
+}
