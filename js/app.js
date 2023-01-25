@@ -144,39 +144,36 @@ document.addEventListener("DOMContentLoaded", function() {
             scoreBar.innerHTML = score;
     
             //Death ability
+            let death= document.querySelector("#ellen-ham")
             if ((playHpCount <= 0) || (sleepHpCount <= 0) || (hungerHpCount <= 0)) {
                 playHpCount = 0;
                 sleepHpCount = 0;
                 hungerHpCount = 0;
                 clearInterval(coreUpdate);
-                document.querySelector("")
+                death.src= "https://64.media.tumblr.com/d87139bc126ba73e715d215914ddbbd1/tumblr_odo8oo2b3H1qdhps7o4_r1_250.gif"
                 alert(`Your score is ${score}, your tamagatchi alien is dead, and you failed to spread throughout the galaxy`);
             }
     
             //transformation gifs
-            // let imageIndex = 0;
+ 
+            let born= document.querySelector("#alien-egg")
 
-
-            // setInterval=() => {
+            setTimeout (() => {
             // alert("Your alien tamagatchi pet is a face hugger!")
-            // document.querySelector('.egg').getElementsByClassName.visibility = 'hidden'
-            // }, 10000
+                born.visibility = 'visible'
+            }, 20000)
+
+            setTimeout (()=> {
+                born.src="https://media.tenor.com/TxZdT5_swY0AAAAM/chestbuster-aliens.gif"
+                born.visibility = 'visible'
+            }, 30000)
+
+            setTimeout (()=> {
+                born.src= "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif"
+                born.visibility = 'visible'
+            }, 40000)
 
 
-
-
-            //   function evolve () {
-                // if (score < 25) {
-                // document.querySelector(".alien-egg-img").src = "https://media2.giphy.com/media/g3NVdvODbNvlC/100.webp?cid=ecf05e47pydbiggniuc5joh9er20vrheqvmywn2c3w6x8n4b&rid=100.webp&ct=g";
-                // // alert("Your alien is a face hugger!")
-                // } else if (score > 25 && score < 50) {
-                //     document.querySelector(".alien-burster-img").src = "https://media.tenor.com/TxZdT5_swY0AAAAM/chestbuster-aliens.gif";
-                //     // alert("Your face hugger impregnated an unsuspected human and has evolved into a chest burster!")
-                // } else if (score > 50 && score < 75) {
-                //     document.querySelector(".alien-queen-img").src = "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif" 
-                //     // alert ("Your chest burster has evolved into the Queen alien!")
-
-                // }
             
 
 

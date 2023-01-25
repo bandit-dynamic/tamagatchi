@@ -18,7 +18,7 @@ body {
 }
 
 
-.alien-egg-img {
+#alien-egg-img {
     position: relative;
     width: 00px;
     height: 00px;
@@ -55,7 +55,7 @@ body {
     height: 00px;
     left: 720px;
     top: 25px;
-    visibility: visible;
+    visibility: hidden;
     
 }   
 
