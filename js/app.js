@@ -186,17 +186,17 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout (() => {
             // alert("Your alien tamagatchi pet is a face hugger!")
                 born.visibility = 'visible'
-            }, 5000)
+            }, 10000)
 
             setTimeout (()=> {
                 born.src="https://media.tenor.com/TxZdT5_swY0AAAAM/chestbuster-aliens.gif"
                 born.visibility = 'visible'
-            }, 10000)
+            }, 20000)
 
             setTimeout (()=> {
                 born.src= "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif"
                 born.visibility = 'visible'
-            }, 20000)
+            }, 30000)
 
             setInterval(() => {
                 const x = Math.floor(Math.random() *10)
