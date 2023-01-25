@@ -152,13 +152,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         //Start game
         core();
-        let coreUpdate = setInterval(core, 100 * day);
+        let coreUpdate = setInterval(core, 30 * day);
     
         //Main function of tamagotchi
         function core() {
-            sleepHpCount = (tmgch.sleep / maxSleep * 100).toFixed(2);
-            hungerHpCount = (tmgch.hunger / maxHunger * 100).toFixed(2);
-            playHpCount = (tmgch.play / maxPlay * 100).toFixed(2);
+            sleepHpCount = (tmgch.sleep / maxSleep * 30).toFixed(2);
+            hungerHpCount = (tmgch.hunger / maxHunger * 30).toFixed(2);
+            playHpCount = (tmgch.play / maxPlay * 30).toFixed(2);
     
             //Scores
             score++;
@@ -186,17 +186,17 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout (() => {
             // alert("Your alien tamagatchi pet is a face hugger!")
                 born.visibility = 'visible'
-            }, 30000)
+            }, 5000)
 
             setTimeout (()=> {
                 born.src="https://media.tenor.com/TxZdT5_swY0AAAAM/chestbuster-aliens.gif"
                 born.visibility = 'visible'
-            }, 60000)
+            }, 10000)
 
             setTimeout (()=> {
                 born.src= "https://media.tenor.com/aCzTFgsn5qUAAAAC/aliens-xenomorph-queen.gif"
                 born.visibility = 'visible'
-            }, 90000)
+            }, 20000)
 
             setInterval(() => {
                 const x = Math.floor(Math.random() *10)
@@ -209,27 +209,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
             //Max health percentage
-            if (tmgch.sleep >= (maxSleep + (maxSleep / 100 * 20))) {
-                tmgch.sleep = maxSleep + (maxSleep / 100 * 20);
+            if (tmgch.sleep >= (maxSleep + (maxSleep / 50 * 20))) {
+                tmgch.sleep = maxSleep + (maxSleep / 50 * 20);
             }
     
-            if (tmgch.hunger >= (maxHunger + (maxHunger / 100 * 20))) {
-                tmgch.hunger = maxHunger + (maxHunger / 100 * 20);
+            if (tmgch.hunger >= (maxHunger + (maxHunger / 50 * 20))) {
+                tmgch.hunger = maxHunger + (maxHunger / 50 * 20);
             }
     
-            if (tmgch.play >= (maxPlay + (maxPlay / 100 * 20))) {
-                tmgch.play = maxPlay + (maxPlay / 100 * 20);
+            if (tmgch.play >= (maxPlay + (maxPlay / 50 * 20))) {
+                tmgch.play = maxPlay + (maxPlay / 50 * 20);
             }
     
             //Max health percentage (for player)
-            if ((tmgch.sleep / maxSleep * 100) > 100) {
+            if ((tmgch.sleep / maxSleep * 50) > 50) {
                 sleepHpCount = 100;
             }
-            if ((tmgch.hunger / maxHunger * 100) > 100) {
+            if ((tmgch.hunger / maxHunger * 50) > 50) {
                 hungerHpCount = 100;
             }
-            if ((tmgch.play / maxPlay * 100) > 100) {
-                playHpCount = 100;
+            if ((tmgch.play / maxPlay * 50) > 50) {
+                playHpCount = 50;
             }
     
             //Show HP on screen
